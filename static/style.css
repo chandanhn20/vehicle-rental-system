@@ -1,0 +1,252 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.container {
+    width: 400px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    color: black;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+h2 {
+    text-align: center;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+button {
+    background-color: #2a5298;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #1e3c72;
+}
+
+.navbar {
+    background: #111;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.booking-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.booking-table th,
+.booking-table td {
+    padding: 12px;
+    text-align: center;
+}
+
+.booking-table th {
+    background: #1e3c72;
+    color: white;
+}
+
+.booking-table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+.cancel-btn {
+    background: red;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.cancel-btn:hover {
+    background: darkred;
+}
+
+.no-booking {
+    text-align: center;
+    font-size: 18px;
+}
+
+.vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.vehicle-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.vehicle-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #1e3c72;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #163060;
+}
+/* ===== Global Styles ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #00f2fe;
+}
+
+/* ===== Vehicle Grid ===== */
+.vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* ===== Vehicle Card ===== */
+.vehicle-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.vehicle-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.vehicle-card h3 {
+    margin-bottom: 10px;
+}
+
+.vehicle-card p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* ===== Button ===== */
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    background: linear-gradient(45deg, #00f2fe, #4facfe);
+    color: #000;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #43e97b, #38f9d7);
+}
+
+/* ===== Forms ===== */
+form {
+    max-width: 400px;
+    margin: 30px auto;
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    background: linear-gradient(45deg, #00f2fe, #4facfe);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}

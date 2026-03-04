@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2 class="title">My Bookings</h2>
+
+    {% if bookings %}
+    <table class="booking-table">
+        <tr>
+            <th>Vehicle</th>
+            <th>Days</th>
+            <th>Total Price</th>
+            <th>Action</th>
+        </tr>
+
+        {% for booking in bookings %}
+        <tr>
+            <td>{{ booking.name }}</td>
+            <td>{{ booking.days }}</td>
+            <td>₹{{ booking.total_price }}</td>
+            <td>
+                <a href="/cancel/{{ booking.id }}" class="cancel-btn">
+                    Cancel
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <p class="no-booking">No bookings found.</p>
+    {% endif %}
+</div>
+{% endblock %}

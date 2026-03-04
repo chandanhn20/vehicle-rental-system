@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vehicle Rental</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- ===== Navbar ===== -->
+    <div class="navbar">
+        <h1>Vehicle Rental System</h1>
+        <div>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/vehicles">Vehicles</a>
+            <a href="/my_bookings">My Bookings</a>
+
+            {% if session.get('role') == 'admin' %}
+                <a href="/admin">Admin</a>
+            {% endif %}
+
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+
+    <!-- ===== Page Content ===== -->
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>

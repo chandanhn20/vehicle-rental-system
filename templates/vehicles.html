@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>Available Vehicles</h2>
+
+    <div class="vehicle-grid">
+        {% for v in vehicles %}
+        <div class="vehicle-card">
+            <h3>{{ v.name }}</h3>
+            <p>Price: ₹{{ v.price }} per day</p>
+            <a href="/book/{{ v.id }}" class="btn">Book Now</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

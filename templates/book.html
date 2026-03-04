@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Vehicle</title>
+</head>
+<body>
+    <h2>Book Vehicle</h2>
+
+    <p>Vehicle: {{ vehicle.name }}</p>
+    <p>Price per day: ₹{{ vehicle.price_per_day }}</p>
+
+    <form method="POST">
+        Number of Days:
+        <input type="number" name="days">
+        <button type="submit">Confirm Booking</button>
+    </form>
+
+</body>
+</html>

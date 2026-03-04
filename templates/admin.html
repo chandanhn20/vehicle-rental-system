@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>Admin Panel</h2>
+
+    <h3>All Vehicles</h3>
+    <table class="booking-table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+        {% for v in vehicles %}
+        <tr>
+            <td>{{ v.id }}</td>
+            <td>{{ v.name }}</td>
+            <td>₹{{ v.price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h3>All Bookings</h3>
+    <table class="booking-table">
+        <tr>
+            <th>User</th>
+            <th>Vehicle</th>
+            <th>Days</th>
+            <th>Total</th>
+        </tr>
+        {% for b in bookings %}
+        <tr>
+            <td>{{ b.user_name }}</td>
+            <td>{{ b.vehicle_name }}</td>
+            <td>{{ b.days }}</td>
+            <td>₹{{ b.total_price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
